@@ -1,0 +1,478 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1a1d23;
+  --muted: #6b7280;
+  --border: #e2e5ea;
+  --accent: #2b8a3e;
+  --on-accent: #ffffff;
+  --hole: #dde2e8;
+  --hole-edge: #c3cad3;
+  --radius: 18px;
+
+  color-scheme: light dark;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121418;
+    --surface: #1b1e24;
+    --text: #e8eaee;
+    --muted: #9aa1ad;
+    --border: #2c3038;
+    --accent: #69db7c;
+    --on-accent: #0b2410;
+    --hole: #2a2f37;
+    --hole-edge: #3a414c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: max(16px, env(safe-area-inset-top)) 16px
+    max(24px, env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0 2px 4px;
+}
+
+.header__actions {
+  display: flex;
+  gap: 8px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* Buttons */
+
+.button {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-weight: 650;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.button--secondary {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.button--small {
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* While playing, everything fits on one screen: the board takes what
+   height is left after the header and controls. */
+.app--play {
+  height: 100dvh;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.stage {
+  container-type: size;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+}
+
+/* Board: the outline, sized in squares as big as fits. */
+
+.board {
+  --unit: min(100cqw / var(--w), 100cqh / var(--h), 72px);
+  position: relative;
+  width: calc(var(--w) * var(--unit));
+  height: calc(var(--h) * var(--unit));
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.outline,
+.picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.outline {
+  fill: var(--hole);
+  filter: drop-shadow(0 0 0.5px var(--hole-edge));
+}
+
+.piece {
+  position: absolute;
+  touch-action: none;
+  cursor: grab;
+}
+
+.shape {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.piece--preview {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* The piece in the finger is drawn on its own; its place stays empty. */
+.piece--lifted {
+  opacity: 0;
+}
+
+.piece--dragged {
+  z-index: 5;
+  pointer-events: none;
+  cursor: grabbing;
+  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.25));
+}
+
+.piece--shake0 {
+  animation: shake0 0.3s;
+}
+
+.piece--shake1 {
+  animation: shake1 0.3s;
+}
+
+@keyframes shake0 {
+  25% {
+    translate: -4px;
+  }
+  75% {
+    translate: 4px;
+  }
+}
+
+@keyframes shake1 {
+  25% {
+    translate: -4px;
+  }
+  75% {
+    translate: 4px;
+  }
+}
+
+/* Done: the pieces give way to the picture in its colours. */
+.board--solved .piece {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.picture {
+  animation: reveal 0.6s ease-out;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+/* The tray: the pieces not on the board yet, a little smaller. */
+
+.tray {
+  --tray: clamp(16px, 6.5vw, 32px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.slot {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: calc(var(--size) * var(--tray));
+  height: calc(var(--size) * var(--tray));
+}
+
+.slot .piece {
+  position: static;
+}
+
+/* Under the board */
+
+.bar {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.tools {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 8px;
+}
+
+.tool {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  padding: 12px 2px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.tool:disabled {
+  opacity: 0.4;
+}
+
+/* Solved */
+
+.solved {
+  text-align: center;
+  gap: 8px;
+  animation: pop 0.3s ease-out;
+}
+
+.solved h2 {
+  font-size: 1.6rem;
+}
+
+.solved__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.solved__actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solved,
+  .picture,
+  .piece {
+    animation: none !important;
+  }
+}
+
+/* New game and settings */
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.level {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 28px 12px 20px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--bg);
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: transform 0.1s;
+}
+
+.level:active {
+  transform: scale(0.97);
+}
+
+/* How hard the level is, as one to four filled dots. */
+.level__pips {
+  display: flex;
+  gap: 5px;
+}
+
+.pip {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--muted) 30%, transparent);
+}
+
+.pip--on {
+  background: var(--accent);
+}
+
+.stats {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.stats th,
+.stats td {
+  padding: 8px 4px;
+  text-align: right;
+  border-top: 1px solid var(--border);
+}
+
+.stats thead th {
+  border-top: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stats tbody th {
+  text-align: left;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.footer a {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Settings controls */
+
+.field {
+  display: grid;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.field .muted {
+  display: block;
+  font-weight: 400;
+}
+
+.segmented {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.segmented button {
+  border: 0;
+  background: none;
+  padding: 9px 4px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.segmented button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+}
