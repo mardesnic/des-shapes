@@ -12,7 +12,12 @@ On your phone, open it and choose **Add to Home Screen** (Safari) or **Install a
 
 ## Features
 
-- Four levels of difficulty, from three small pieces that only need moving to seven pieces that need turning
+- About 150 levels: 32 pictures, each cut into pieces a few different ways
+- Four levels of difficulty:
+  - **Very easy**: three or four small pieces that only need moving
+  - **Easy**: four or five pieces that need turning
+  - **Medium**: five to seven pieces
+  - **Hard**: six to nine pieces of four or five squares
 - Drag a piece and it snaps into place where it fits; a light shadow shows where it will land
 - Tap a piece to turn it, in the tray or on the board
 - A finished outline shows its picture in colour
@@ -35,4 +40,4 @@ npm run build      # production build in dist/
 
 `npm run deploy` builds the app and publishes it to GitHub Pages.
 
-The pictures and levels are in `src/lib/levels.ts`: each picture is drawn as text, one letter a square for its colour, and each level cuts a picture into pieces, one letter a piece. The tests check that every level is cut from its picture and can be solved.
+The pictures are drawn as text in `src/lib/pictures.ts`, one letter a square for its colour. `npm run levels` cuts each one into pieces a few ways, keeps the easier cuts, and writes them to `src/levels/`. The tests check that every level is cut from its picture and can be solved.

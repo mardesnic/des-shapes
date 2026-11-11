@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
 import { DIFFICULTIES, newGame, withPiece } from './game';
-import { LEVELS, PALETTE, PICTURES } from './levels';
+import { LEVELS, pickLevel } from './levels';
+import { PALETTE, PICTURES } from './pictures';
 import {
   cellsAt,
   extent,
   fits,
-  pickLevel,
   puzzleOf,
   rotate,
   snap,
@@ -59,13 +59,15 @@ describe('rotate', () => {
 describe('levels', () => {
   const all = DIFFICULTIES.flatMap((d) => LEVELS[d].map((l) => ({ d, l })));
 
-  it('have unique ids', () => {
-    const ids = all.map(({ l }) => l.id);
-    expect(new Set(ids).size).toBe(ids.length);
+  it('have unique ids at each difficulty', () => {
+    for (const d of DIFFICULTIES) {
+      const ids = LEVELS[d].map((l) => l.id);
+      expect(new Set(ids).size).toBe(ids.length);
+    }
   });
 
-  it.each(all)('$l.id is cut from its picture', ({ l }) => {
-    const p = PICTURES.find((p) => p.id === l.picture)!;
+  it.each(all)('$d $l.id is cut from its picture', ({ d, l }) => {
+    const p = PICTURES[d].find((p) => p.id === l.picture)!;
     expect(p).toBeTruthy();
     expect(l.cut.map((row) => row.replace(/[a-z]/g, '#'))).toEqual(
       p.rows.map((row) => row.replace(/[^.]/g, '#'))
@@ -74,7 +76,7 @@ describe('levels', () => {
       for (const ch of row) if (ch !== '.') expect(PALETTE[ch]).toBeTruthy();
   });
 
-  it.each(all)('$l.id has whole pieces, each turned', ({ d, l }) => {
+  it.each(all)('$d $l.id has whole pieces, each turned', ({ d, l }) => {
     const puzzle = puzzleOf(l);
     expect(l.turns).toHaveLength(puzzle.shapes.length);
     for (const s of puzzle.shapes) {
@@ -101,7 +103,7 @@ describe('levels', () => {
     if (d === 'tiny') expect(l.turns.every((t) => t === 0)).toBe(true);
   });
 
-  it.each(all)('$l.id is solved by its own cut', ({ d, l }) => {
+  it.each(all)('$d $l.id is solved by its own cut', ({ d, l }) => {
     const puzzle = puzzleOf(l);
     let game = newGame(d, l);
     puzzle.shapes.forEach((_, i) => {
@@ -114,7 +116,12 @@ describe('levels', () => {
 });
 
 describe('placing', () => {
-  const level = LEVELS.small[0];
+  const level = {
+    id: 'heart',
+    picture: 'heart',
+    cut: ['aa.bb', 'acccb', '.cdd.', '..d..'],
+    turns: [1, 3, 2, 1],
+  };
   const puzzle = puzzleOf(level);
   const tray: Piece[] = puzzle.shapes.map(() => ({ turns: 0, at: null }));
 
@@ -149,18 +156,25 @@ describe('placing', () => {
 });
 
 describe('pickLevel', () => {
-  it('never picks the one just played when there are others', () => {
+  it('never picks the one just played, nor its picture', () => {
     for (const d of DIFFICULTIES) {
-      if (LEVELS[d].length < 2) continue;
-      const prev = LEVELS[d][0].id;
-      for (let k = 0; k < 20; k++)
-        expect(pickLevel(d, [], prev, Math.random).id).not.toBe(prev);
+      const prev = LEVELS[d][0];
+      for (let k = 0; k < 30; k++) {
+        const next = pickLevel(d, [], prev.id, Math.random);
+        expect(next.picture).not.toBe(prev.picture);
+      }
     }
   });
 
-  it('picks the only level again', () => {
-    const only = LEVELS.tiny[0];
-    if (LEVELS.tiny.length === 1)
-      expect(pickLevel('tiny', [only.id], only.id, Math.random)).toBe(only);
+  it('picks levels not solved yet first', () => {
+    const all = LEVELS.small.map((l) => l.id);
+    const left = all[7];
+    const solved = all.filter((id) => id !== left);
+    expect(pickLevel('small', solved, all[0], Math.random).id).toBe(left);
+  });
+
+  it('starts again once every level is solved', () => {
+    const all = LEVELS.big.map((l) => l.id);
+    expect(all).toContain(pickLevel('big', all, all[0], Math.random).id);
   });
 });

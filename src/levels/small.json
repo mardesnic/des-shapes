@@ -1,0 +1,242 @@
+[
+  {
+    "id": "heart-1",
+    "picture": "heart",
+    "cut": ["aa.bb", "acccb", ".ddd.", "..d.."],
+    "turns": [3, 1, 3, 2]
+  },
+  {
+    "id": "heart-2",
+    "picture": "heart",
+    "cut": ["aa.bb", "acddb", ".ccd.", "..c.."],
+    "turns": [2, 3, 1, 1]
+  },
+  {
+    "id": "heart-3",
+    "picture": "heart",
+    "cut": ["aa.bb", "accdb", ".cdd.", "..d.."],
+    "turns": [3, 1, 2, 1]
+  },
+  {
+    "id": "heart-4",
+    "picture": "heart",
+    "cut": ["aa.bb", "acccb", ".cdd.", "..d.."],
+    "turns": [3, 2, 2, 2]
+  },
+  {
+    "id": "heart-5",
+    "picture": "heart",
+    "cut": ["aa.bb", "acccb", ".ddc.", "..d.."],
+    "turns": [1, 1, 1, 1]
+  },
+  {
+    "id": "cat-face-1",
+    "picture": "cat-face",
+    "cut": ["a...b", "ac.bb", "acddb", ".cdd."],
+    "turns": [3, 3, 3, 0]
+  },
+  {
+    "id": "cat-face-2",
+    "picture": "cat-face",
+    "cut": ["a...b", "aa.bb", "acccb", ".ddd."],
+    "turns": [2, 2, 1, 3]
+  },
+  {
+    "id": "cat-face-3",
+    "picture": "cat-face",
+    "cut": ["a...b", "aa.bb", "accdd", ".cdd."],
+    "turns": [1, 2, 1, 3]
+  },
+  {
+    "id": "cat-face-4",
+    "picture": "cat-face",
+    "cut": ["a...b", "ac.db", "acddb", ".ccd."],
+    "turns": [1, 3, 2, 2]
+  },
+  {
+    "id": "cat-face-5",
+    "picture": "cat-face",
+    "cut": ["a...b", "ac.db", "accdb", ".cdd."],
+    "turns": [3, 3, 1, 1]
+  },
+  {
+    "id": "car-1",
+    "picture": "car",
+    "cut": [".abb.", "aacbb", "accdd", ".c.d."],
+    "turns": [3, 3, 3, 1]
+  },
+  {
+    "id": "car-2",
+    "picture": "car",
+    "cut": [".aab.", "cadbb", "ccddb", ".c.d."],
+    "turns": [2, 3, 3, 3]
+  },
+  {
+    "id": "car-3",
+    "picture": "car",
+    "cut": [".aab.", "caabb", "ccddb", ".c.d."],
+    "turns": [0, 3, 3, 3]
+  },
+  {
+    "id": "car-4",
+    "picture": "car",
+    "cut": [".aaa.", "bbbbc", "dddcc", ".d.c."],
+    "turns": [1, 3, 1, 2]
+  },
+  {
+    "id": "car-5",
+    "picture": "car",
+    "cut": [".abb.", "caabb", "ccadd", ".c.d."],
+    "turns": [1, 1, 3, 2]
+  },
+  {
+    "id": "rocket-1",
+    "picture": "rocket",
+    "cut": [".a.", "bac", "bac", "bcc", "ddd"],
+    "turns": [3, 3, 1, 3]
+  },
+  {
+    "id": "rocket-2",
+    "picture": "rocket",
+    "cut": [".a.", "baa", "bba", "cdd", "ccd"],
+    "turns": [1, 1, 1, 1]
+  },
+  {
+    "id": "rocket-3",
+    "picture": "rocket",
+    "cut": [".a.", "aaa", "bcd", "bcd", "bcd"],
+    "turns": [1, 3, 1, 1]
+  },
+  {
+    "id": "rocket-4",
+    "picture": "rocket",
+    "cut": [".a.", "baa", "bbc", "ddc", "dcc"],
+    "turns": [3, 3, 3, 1]
+  },
+  {
+    "id": "rocket-5",
+    "picture": "rocket",
+    "cut": [".a.", "baa", "bcd", "bcd", "ccd"],
+    "turns": [2, 3, 2, 1]
+  },
+  {
+    "id": "tree-1",
+    "picture": "tree",
+    "cut": ["..a..", ".baa.", "bbacc", ".ddc.", "..d.."],
+    "turns": [1, 1, 2, 2]
+  },
+  {
+    "id": "tree-2",
+    "picture": "tree",
+    "cut": ["..a..", ".baa.", "bbccc", ".ddc.", "..d.."],
+    "turns": [2, 3, 2, 2]
+  },
+  {
+    "id": "tree-3",
+    "picture": "tree",
+    "cut": ["..a..", ".aab.", "cccbb", ".cdd.", "..d.."],
+    "turns": [3, 1, 3, 1]
+  },
+  {
+    "id": "tree-4",
+    "picture": "tree",
+    "cut": ["..a..", ".aab.", "ccbbb", ".cdd.", "..d.."],
+    "turns": [1, 2, 1, 3]
+  },
+  {
+    "id": "tree-5",
+    "picture": "tree",
+    "cut": ["..a..", ".aab.", "ccabb", ".cdd.", "..d.."],
+    "turns": [3, 1, 2, 1]
+  },
+  {
+    "id": "apple-1",
+    "picture": "apple",
+    "cut": ["..a.", ".bac", "bbac", "bddc", ".dd."],
+    "turns": [3, 1, 3, 0]
+  },
+  {
+    "id": "apple-2",
+    "picture": "apple",
+    "cut": ["..a.", ".aab", "ccbb", "ccdd", ".dd."],
+    "turns": [2, 2, 0, 3]
+  },
+  {
+    "id": "apple-3",
+    "picture": "apple",
+    "cut": ["..a.", ".bac", "bbac", "ddac", ".dd."],
+    "turns": [1, 2, 1, 3]
+  },
+  {
+    "id": "apple-4",
+    "picture": "apple",
+    "cut": ["..a.", ".baa", "bbcc", "bddc", ".dd."],
+    "turns": [2, 1, 3, 0]
+  },
+  {
+    "id": "apple-5",
+    "picture": "apple",
+    "cut": ["..a.", ".baa", "cbbb", "ccdd", ".cd."],
+    "turns": [3, 2, 3, 3]
+  },
+  {
+    "id": "ghost-1",
+    "picture": "ghost",
+    "cut": [".abc.", "dabce", "dabce", "d.b.e"],
+    "turns": [1, 1, 3, 1, 3]
+  },
+  {
+    "id": "ghost-2",
+    "picture": "ghost",
+    "cut": [".abc.", "aabcc", "ddbee", "d.b.e"],
+    "turns": [1, 3, 1, 1, 1]
+  },
+  {
+    "id": "ghost-3",
+    "picture": "ghost",
+    "cut": [".aab.", "ccabb", "cddee", "c.d.e"],
+    "turns": [2, 2, 3, 3, 3]
+  },
+  {
+    "id": "ghost-4",
+    "picture": "ghost",
+    "cut": [".aaa.", "bcdde", "bccde", "b.c.e"],
+    "turns": [1, 3, 3, 1, 1]
+  },
+  {
+    "id": "ghost-5",
+    "picture": "ghost",
+    "cut": [".abb.", "aabbc", "ddeec", "d.e.c"],
+    "turns": [1, 0, 1, 1, 2]
+  },
+  {
+    "id": "umbrella-1",
+    "picture": "umbrella",
+    "cut": [".aaa.", "bbccc", "b.d.c", "..d..", ".dd.."],
+    "turns": [1, 3, 1, 1]
+  },
+  {
+    "id": "umbrella-2",
+    "picture": "umbrella",
+    "cut": [".aaa.", "bbacc", "b.d.c", "..d..", ".dd.."],
+    "turns": [2, 3, 2, 2]
+  },
+  {
+    "id": "umbrella-3",
+    "picture": "umbrella",
+    "cut": [".aaa.", "bbbcc", "b.d.c", "..d..", ".dd.."],
+    "turns": [3, 2, 3, 3]
+  },
+  {
+    "id": "umbrella-4",
+    "picture": "umbrella",
+    "cut": [".aab.", "ccabb", "c.a.b", "..d..", ".dd.."],
+    "turns": [1, 1, 3, 1]
+  },
+  {
+    "id": "umbrella-5",
+    "picture": "umbrella",
+    "cut": [".aab.", "ccabb", "c.d.b", "..d..", ".dd.."],
+    "turns": [1, 3, 1, 3]
+  }
+]

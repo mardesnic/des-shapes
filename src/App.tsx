@@ -16,13 +16,8 @@ import {
   type Stats,
 } from './lib/game';
 import { STRINGS, detectLang } from './lib/i18n';
-import {
-  levelById,
-  pickLevel,
-  pictureOf,
-  puzzleOf,
-  type Piece,
-} from './lib/shapes';
+import { levelById, pickLevel, pictureOf } from './lib/levels';
+import { puzzleOf, type Piece } from './lib/shapes';
 import { popMenu, pushMenu, useBackButton } from './lib/use-back-button';
 import { useCheer } from './lib/use-cheer';
 import { useStoredState } from './lib/use-stored-state';
@@ -41,7 +36,7 @@ export default function App() {
     levelById(store.game.difficulty, store.game.level);
   const game = level ? store.game : undefined;
   const puzzle = useMemo(() => level && puzzleOf(level), [level]);
-  const picture = level && pictureOf(level);
+  const picture = level && game && pictureOf(game.difficulty, level);
   const [settings, setSettings] = useStoredState<Settings>(
     'shapes-settings',
     initialSettings

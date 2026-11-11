@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 
 import type { Strings } from '../lib/i18n';
-import { PALETTE, type Picture } from '../lib/levels';
+import { PALETTE, type Picture } from '../lib/pictures';
 import {
   extent,
   rotate,
@@ -332,7 +332,7 @@ export function Board({
       </div>
 
       {!solved && (
-        <div className='tray'>
+        <div className={pieces.length > 6 ? 'tray tray--many' : 'tray'}>
           {pieces.map((p, i) => {
             // Each piece keeps its place in the tray, big enough for it
             // turned any way, so nothing moves when one is taken out.

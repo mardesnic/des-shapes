@@ -1,5 +1,6 @@
-import type { Difficulty } from './game';
-import { LEVELS, PICTURES, type Level, type Picture } from './levels';
+// The rules: pieces, turning, and where a piece fits. No data here, so
+// scripts/make-levels.ts can use it too.
+import type { Level } from './levels';
 
 // A square on the board, as [row, column].
 export type Cell = readonly [number, number];
@@ -26,12 +27,6 @@ export const extent = (s: Shape) => ({
   h: Math.max(...s.map(([r]) => r)) + 1,
   w: Math.max(...s.map(([, c]) => c)) + 1,
 });
-
-export const pictureOf = (level: Level): Picture =>
-  PICTURES.find((p) => p.id === level.picture)!;
-
-export const levelById = (d: Difficulty, id: string) =>
-  LEVELS[d].find((l) => l.id === id);
 
 // Everything about a level the game needs while playing.
 export type Puzzle = {
@@ -126,20 +121,4 @@ export function turnInPlace(
   const [r1, c1] = middle(rotate(puzzle.shapes[i], turns + 1));
   const next = snap(puzzle, pieces, i, turns + 1, r0 - r1, c0 - c1);
   return next && { turns: (turns + 1) % 4, at: next };
-}
-
-// The next level: one not solved yet if there are any left, and never the
-// one just played.
-export function pickLevel(
-  d: Difficulty,
-  solved: string[],
-  previous: string | undefined,
-  random: () => number
-): Level {
-  const all = LEVELS[d];
-  const fresh = all.filter((l) => !solved.includes(l.id) && l.id !== previous);
-  const pool = fresh.length
-    ? fresh
-    : all.filter((l) => l.id !== previous || all.length === 1);
-  return pool[Math.floor(random() * pool.length)];
 }

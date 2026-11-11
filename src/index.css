@@ -270,6 +270,11 @@ h2 {
   border: 1px solid var(--border);
 }
 
+.tray--many {
+  --tray: clamp(13px, 5vw, 26px);
+  gap: 6px 10px;
+}
+
 .slot {
   position: relative;
   display: grid;

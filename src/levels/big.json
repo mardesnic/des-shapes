@@ -1,0 +1,402 @@
+[
+  {
+    "id": "house-1",
+    "picture": "house",
+    "cut": [
+      "..aa..",
+      ".bacc.",
+      "bbadcc",
+      ".bbdc.",
+      ".eedf.",
+      ".eddf.",
+      ".efff."
+    ],
+    "turns": [3, 1, 3, 1, 2, 1]
+  },
+  {
+    "id": "house-2",
+    "picture": "house",
+    "cut": [
+      "..aa..",
+      ".bbac.",
+      "bbdacc",
+      ".bdcc.",
+      ".eddf.",
+      ".edff.",
+      ".eeef."
+    ],
+    "turns": [3, 1, 2, 3, 3, 1]
+  },
+  {
+    "id": "house-3",
+    "picture": "house",
+    "cut": [
+      "..aa..",
+      ".aabb.",
+      "ccdbbb",
+      ".cddd.",
+      ".ccee.",
+      ".fffe.",
+      ".ffee."
+    ],
+    "turns": [3, 3, 1, 2, 1, 1]
+  },
+  {
+    "id": "house-4",
+    "picture": "house",
+    "cut": [
+      "..aa..",
+      ".bbaa.",
+      "bbbccc",
+      ".dcce.",
+      ".ddde.",
+      ".deee.",
+      ".ffff."
+    ],
+    "turns": [1, 1, 1, 1, 1, 3]
+  },
+  {
+    "id": "house-5",
+    "picture": "house",
+    "cut": [
+      "..aa..",
+      ".baac.",
+      "bbadcc",
+      ".bedc.",
+      ".eedc.",
+      ".efdd.",
+      ".ffff."
+    ],
+    "turns": [3, 1, 3, 3, 3, 1]
+  },
+  {
+    "id": "pig-1",
+    "picture": "pig",
+    "cut": ["aa...bc", "daabbbc", "ddeebcc", "dfgeehc", "dfgghhh", ".ffggh."],
+    "turns": [3, 1, 1, 2, 3, 1, 1, 0]
+  },
+  {
+    "id": "pig-2",
+    "picture": "pig",
+    "cut": ["aa...bc", "aadbbbc", "adddbec", "ffgeeec", "ffghhec", ".ggghh."],
+    "turns": [2, 1, 3, 2, 3, 0, 3, 3]
+  },
+  {
+    "id": "pig-3",
+    "picture": "pig",
+    "cut": ["aa...bb", "acccbbd", "aaeccbd", "eeeffdd", "eggfhhd", ".ggfhh."],
+    "turns": [1, 3, 3, 1, 1, 1, 0, 0]
+  },
+  {
+    "id": "pig-4",
+    "picture": "pig",
+    "cut": ["aa...bb", "accdddb", "aeccdfb", "aeecgfb", "hheegff", ".hhhgg."],
+    "turns": [1, 3, 1, 3, 3, 1, 3, 2]
+  },
+  {
+    "id": "pig-5",
+    "picture": "pig",
+    "cut": ["aa...bb", "caadbbe", "ccfddde", "ccffdee", "ggffhhe", ".ggghh."],
+    "turns": [1, 1, 1, 3, 1, 1, 2, 0]
+  },
+  {
+    "id": "penguin-1",
+    "picture": "penguin",
+    "cut": [
+      "..aab..",
+      ".aacbb.",
+      ".ddccb.",
+      "ddeecff",
+      ".eeggf.",
+      ".hhhgf.",
+      ".hh.gg."
+    ],
+    "turns": [3, 3, 3, 1, 1, 3, 1, 2]
+  },
+  {
+    "id": "penguin-2",
+    "picture": "penguin",
+    "cut": [
+      "..abb..",
+      ".aabbc.",
+      ".adbec.",
+      "dddeecc",
+      ".dfeec.",
+      ".ffggg.",
+      ".ff.gg."
+    ],
+    "turns": [3, 2, 3, 2, 3, 1, 1]
+  },
+  {
+    "id": "penguin-3",
+    "picture": "penguin",
+    "cut": [
+      "..aab..",
+      ".caabd.",
+      ".caebd.",
+      "cccebdd",
+      ".ffebd.",
+      ".feegg.",
+      ".ff.gg."
+    ],
+    "turns": [1, 3, 3, 2, 3, 1, 0]
+  },
+  {
+    "id": "penguin-4",
+    "picture": "penguin",
+    "cut": [
+      "..aaa..",
+      ".bbbac.",
+      ".bddac.",
+      "eeedccc",
+      ".eeddf.",
+      ".gggff.",
+      ".gg.ff."
+    ],
+    "turns": [3, 3, 2, 3, 2, 3, 3]
+  },
+  {
+    "id": "penguin-5",
+    "picture": "penguin",
+    "cut": [
+      "..aab..",
+      ".aabbb.",
+      ".cccdd.",
+      "eeecfdd",
+      ".efffd.",
+      ".ggfhh.",
+      ".gg.hh."
+    ],
+    "turns": [3, 1, 3, 3, 3, 1, 0, 0]
+  },
+  {
+    "id": "car-1",
+    "picture": "car",
+    "cut": ["..aabb..", ".caadbb.", "ccdddeff", "cggdeeff", ".gg..ee."],
+    "turns": [0, 3, 3, 2, 3, 0, 0]
+  },
+  {
+    "id": "car-2",
+    "picture": "car",
+    "cut": ["..aabb..", ".aaacbb.", "dddcccee", "ffddggee", ".ff..gg."],
+    "turns": [1, 3, 1, 2, 0, 3, 1]
+  },
+  {
+    "id": "car-3",
+    "picture": "car",
+    "cut": ["..aaaa..", ".bbbbcc.", "ddefffcc", "ddeefggc", ".ee..gg."],
+    "turns": [1, 1, 2, 0, 2, 3, 0]
+  },
+  {
+    "id": "car-4",
+    "picture": "car",
+    "cut": ["..aabb..", ".ccabbd.", "eccafbdd", "eefffggd", ".ee..gg."],
+    "turns": [1, 3, 0, 3, 2, 1, 0]
+  },
+  {
+    "id": "car-5",
+    "picture": "car",
+    "cut": ["..abcc..", ".aabbcc.", "daeebcff", "ddegggff", ".de..gg."],
+    "turns": [3, 3, 1, 1, 2, 0, 2]
+  },
+  {
+    "id": "ladybird-1",
+    "picture": "ladybird",
+    "cut": [
+      "...a...",
+      "..aaa..",
+      ".bbacc.",
+      "dbbeccf",
+      "deeefff",
+      "ddegggg",
+      ".hhhhh."
+    ],
+    "turns": [0, 0, 0, 1, 2, 3, 1, 3]
+  },
+  {
+    "id": "ladybird-2",
+    "picture": "ladybird",
+    "cut": [
+      "...a...",
+      "..aab..",
+      ".ccabd.",
+      "eecbbdf",
+      "egcdddf",
+      "eghhhff",
+      ".ggghh."
+    ],
+    "turns": [2, 1, 3, 3, 3, 3, 2, 1]
+  },
+  {
+    "id": "ladybird-3",
+    "picture": "ladybird",
+    "cut": [
+      "...a...",
+      "..aab..",
+      ".ccabb.",
+      "ddcabee",
+      "ddcffee",
+      "dggffhe",
+      ".gghhh."
+    ],
+    "turns": [3, 1, 1, 3, 2, 0, 0, 3]
+  },
+  {
+    "id": "ladybird-4",
+    "picture": "ladybird",
+    "cut": [
+      "...a...",
+      "..aab..",
+      ".cdabb.",
+      "ccdabbe",
+      "cfdggge",
+      "ffdggee",
+      ".fhhhh."
+    ],
+    "turns": [3, 1, 3, 3, 3, 3, 2, 3]
+  },
+  {
+    "id": "ladybird-5",
+    "picture": "ladybird",
+    "cut": [
+      "...a...",
+      "..baa..",
+      ".bbacd.",
+      "ebfccdd",
+      "effgchd",
+      "eefghhh",
+      ".egggh."
+    ],
+    "turns": [2, 1, 1, 3, 3, 2, 1, 0]
+  },
+  {
+    "id": "castle-1",
+    "picture": "castle",
+    "cut": ["a.b.c.d", "aabeccd", "aabeecd", "fgbbedd", "fgghhii", "ffghhii"],
+    "turns": [1, 1, 3, 1, 1, 1, 3, 0, 0]
+  },
+  {
+    "id": "castle-2",
+    "picture": "castle",
+    "cut": ["a.b.c.d", "abbbcdd", "aeeccdd", "aaeecff", "ggehhff", "ggghhhf"],
+    "turns": [1, 2, 2, 1, 1, 2, 3, 1]
+  },
+  {
+    "id": "castle-3",
+    "picture": "castle",
+    "cut": ["a.b.c.d", "aabccdd", "eabccfd", "eebgfff", "hegggfi", "hhhgiii"],
+    "turns": [3, 1, 2, 3, 3, 0, 0, 1, 2]
+  },
+  {
+    "id": "castle-4",
+    "picture": "castle",
+    "cut": ["a.b.c.d", "aabccdd", "aebcddf", "eebggff", "ehhgiif", "ehhgiif"],
+    "turns": [3, 1, 3, 2, 2, 1, 3, 0, 0]
+  },
+  {
+    "id": "castle-5",
+    "picture": "castle",
+    "cut": ["a.b.c.d", "aabbcdd", "aabbcde", "ffffcde", "ggfhche", "ggghhhe"],
+    "turns": [3, 3, 1, 2, 1, 3, 1, 2]
+  },
+  {
+    "id": "frog-1",
+    "picture": "frog",
+    "cut": [
+      ".aa.bc.",
+      "deaabcc",
+      "deeebcf",
+      "ddegbff",
+      "dhhggif",
+      ".hggii.",
+      "hh...ii"
+    ],
+    "turns": [1, 3, 2, 2, 3, 3, 1, 3, 2]
+  },
+  {
+    "id": "frog-2",
+    "picture": "frog",
+    "cut": [
+      ".aa.bb.",
+      "caadbbe",
+      "cdddfee",
+      "cdffffe",
+      "cghhhie",
+      ".gghhi.",
+      "gg...ii"
+    ],
+    "turns": [0, 0, 3, 1, 3, 1, 2, 2, 1]
+  },
+  {
+    "id": "frog-3",
+    "picture": "frog",
+    "cut": [
+      ".aa.bb.",
+      "ccaabbd",
+      "ccefffd",
+      "eeefgdd",
+      "ehhggid",
+      ".hggii.",
+      "hh...ii"
+    ],
+    "turns": [1, 0, 0, 2, 3, 3, 3, 3, 3]
+  },
+  {
+    "id": "frog-4",
+    "picture": "frog",
+    "cut": [
+      ".aa.bb.",
+      "caadbbb",
+      "ccdddee",
+      "cffdgee",
+      "cffgghe",
+      ".iiggh.",
+      "ii...hh"
+    ],
+    "turns": [0, 3, 3, 0, 3, 0, 2, 3, 3]
+  },
+  {
+    "id": "frog-5",
+    "picture": "frog",
+    "cut": [
+      ".aa.bc.",
+      "daaabcc",
+      "deebbfc",
+      "deggbff",
+      "dehggif",
+      ".hhgii.",
+      "hh...ii"
+    ],
+    "turns": [3, 1, 3, 3, 1, 3, 2, 1, 2]
+  },
+  {
+    "id": "bus-1",
+    "picture": "bus",
+    "cut": ["abbbbbc", "aaaaccc", "deeeffc", "ddeffgg", ".de.gg."],
+    "turns": [1, 3, 3, 3, 3, 3, 1]
+  },
+  {
+    "id": "bus-2",
+    "picture": "bus",
+    "cut": ["aabbccc", "aadbcec", "ffdbbee", "ffdggge", ".dd.gg."],
+    "turns": [0, 1, 2, 3, 3, 0, 2]
+  },
+  {
+    "id": "bus-3",
+    "picture": "bus",
+    "cut": ["aabbbcc", "aabdccc", "eeddffg", "eedffgg", ".ed.fg."],
+    "turns": [0, 1, 3, 1, 1, 1, 1]
+  },
+  {
+    "id": "bus-4",
+    "picture": "bus",
+    "cut": ["aaaabbb", "accccdb", "eeeefdb", "ggfffdd", ".gg.fd."],
+    "turns": [2, 2, 1, 2, 1, 3, 1]
+  },
+  {
+    "id": "bus-5",
+    "picture": "bus",
+    "cut": ["aaabbcc", "ddabecc", "dffbeec", "dfgggee", ".ff.gg."],
+    "turns": [1, 1, 2, 3, 3, 2, 3]
+  }
+]

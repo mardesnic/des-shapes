@@ -1,0 +1,176 @@
+[
+  {
+    "id": "boat-1",
+    "picture": "boat",
+    "cut": [".a...", ".ab..", ".bbc.", "dddcc"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "boat-2",
+    "picture": "boat",
+    "cut": [".a...", ".aa..", ".bcc.", "bbcdd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "boat-3",
+    "picture": "boat",
+    "cut": [".a...", ".aa..", ".bbb.", "ccddd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "boat-4",
+    "picture": "boat",
+    "cut": [".a...", ".aa..", ".bcd.", "bbcdd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "tree-1",
+    "picture": "tree",
+    "cut": [".a.", "aab", "cbb", "cdd", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "tree-2",
+    "picture": "tree",
+    "cut": [".a.", "aab", "ccb", "cdd", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "tree-3",
+    "picture": "tree",
+    "cut": [".a.", "baa", "bcc", "bdd", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "tree-4",
+    "picture": "tree",
+    "cut": [".a.", "baa", "bbc", "ddc", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "mushroom-1",
+    "picture": "mushroom",
+    "cut": [".aa.", "bbcc", ".dc.", ".dd."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "mushroom-2",
+    "picture": "mushroom",
+    "cut": [".ab.", "aabb", ".cc.", ".dd."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "mushroom-3",
+    "picture": "mushroom",
+    "cut": [".ab.", "aabb", ".cd.", ".cd."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "mushroom-4",
+    "picture": "mushroom",
+    "cut": [".aa.", "bbcc", ".bc.", ".dd."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "ice-cream-1",
+    "picture": "ice-cream",
+    "cut": ["aab", "ccb", "cdd", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "ice-cream-2",
+    "picture": "ice-cream",
+    "cut": ["abb", "aac", "ddc", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "ice-cream-3",
+    "picture": "ice-cream",
+    "cut": ["aaa", "bcd", "bcd", ".c."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "ice-cream-4",
+    "picture": "ice-cream",
+    "cut": ["abb", "abc", "ddc", ".d."],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "house-1",
+    "picture": "house",
+    "cut": [".a.", "aab", "ccb", "ddb"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "house-2",
+    "picture": "house",
+    "cut": [".a.", "bac", "bcc", "ddd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "house-3",
+    "picture": "house",
+    "cut": [".a.", "aab", "cbb", "cdd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "house-4",
+    "picture": "house",
+    "cut": [".a.", "aab", "cdb", "cdd"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "fish-1",
+    "picture": "fish",
+    "cut": [".ab.c", "aabbc", ".dd.c"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "fish-2",
+    "picture": "fish",
+    "cut": [".ab.c", "aabbc", ".dd.c"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "heart-1",
+    "picture": "heart",
+    "cut": ["a.b", "abb", "acc", ".c."],
+    "turns": [0, 0, 0]
+  },
+  {
+    "id": "heart-2",
+    "picture": "heart",
+    "cut": ["a.b", "abb", "acc", ".c."],
+    "turns": [0, 0, 0]
+  },
+  {
+    "id": "heart-3",
+    "picture": "heart",
+    "cut": ["a.b", "acb", "acb", ".c."],
+    "turns": [0, 0, 0]
+  },
+  {
+    "id": "car-1",
+    "picture": "car",
+    "cut": [".ab.", "aabb", "ccdd", "c..d"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "car-2",
+    "picture": "car",
+    "cut": [".ab.", "cabd", "cabd", "c..d"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "car-3",
+    "picture": "car",
+    "cut": [".ab.", "aabc", "ddbc", "d..c"],
+    "turns": [0, 0, 0, 0]
+  },
+  {
+    "id": "car-4",
+    "picture": "car",
+    "cut": [".aa.", "bacd", "bccd", "b..d"],
+    "turns": [0, 0, 0, 0]
+  }
+]
