@@ -17,19 +17,37 @@ type Config = {
   sizes: number[];
   pieces: [number, number];
   cuts: number;
+  // Levels come from this easiest part of the different cuts found.
+  easiest: number;
   // Whether pieces start turned, so the child has to turn them back.
   turn: boolean;
 };
 
 const CONFIG: Record<keyof typeof PICTURES, Config> = {
-  tiny: { sizes: [2, 3, 3], pieces: [3, 4], cuts: 4, turn: false },
-  small: { sizes: [3, 4], pieces: [4, 5], cuts: 5, turn: true },
-  medium: { sizes: [3, 4, 4, 4], pieces: [5, 7], cuts: 5, turn: true },
-  big: { sizes: [4, 5], pieces: [6, 9], cuts: 5, turn: true },
+  tiny: {
+    sizes: [2, 3, 3],
+    pieces: [3, 4],
+    cuts: 4,
+    easiest: 0.4,
+    turn: false,
+  },
+  small: { sizes: [3, 4], pieces: [4, 5], cuts: 5, easiest: 0.4, turn: true },
+  medium: {
+    sizes: [3, 4, 4, 4],
+    pieces: [5, 7],
+    cuts: 5,
+    easiest: 0.4,
+    turn: true,
+  },
+  big: {
+    sizes: [4, 4, 4, 5],
+    pieces: [6, 8],
+    cuts: 5,
+    easiest: 0.15,
+    turn: true,
+  },
 };
 const TRIES = 4000;
-// Of the different cuts found, levels come from this easiest part.
-const EASIEST = 0.4;
 
 // A small seeded random, so running the script again gives the same levels.
 function seeded(seed: number) {
@@ -193,7 +211,7 @@ for (const [d, pictures] of Object.entries(PICTURES)) {
       .sort((a, b) => a.effort - b.effort);
     const easiest = scored.slice(
       0,
-      Math.max(cfg.cuts, Math.ceil(scored.length * EASIEST))
+      Math.max(cfg.cuts, Math.ceil(scored.length * cfg.easiest))
     );
     // Spread out over the easiest, so the kept levels differ.
     const kept = Array.from(

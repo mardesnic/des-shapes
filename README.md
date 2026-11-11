@@ -17,7 +17,7 @@ On your phone, open it and choose **Add to Home Screen** (Safari) or **Install a
   - **Very easy**: three or four small pieces that only need moving
   - **Easy**: four or five pieces that need turning
   - **Medium**: five to seven pieces
-  - **Hard**: six to nine pieces of four or five squares
+  - **Hard**: six to eight pieces, most of four squares
 - Drag a piece and it snaps into place where it fits; a light shadow shows where it will land
 - Tap a piece to turn it, in the tray or on the board
 - A finished outline shows its picture in colour

@@ -163,7 +163,7 @@ const MEDIUM: Picture[] = [
   },
 ];
 
-// 26 to 40 squares: six to nine pieces of four or five.
+// 28 to 34 squares: six to eight pieces, most of four.
 const BIG: Picture[] = [
   {
     id: 'house',
@@ -181,7 +181,7 @@ const BIG: Picture[] = [
   {
     id: 'pig',
     name: { en: 'a pig', hr: 'prase' },
-    rows: ['PP...PP', 'PPPPPPP', 'PKPPPKP', 'PPMMMPP', 'PPMMMPP', '.PPPPP.'],
+    rows: ['PP...PP', 'PPPPPPP', 'PKPPPKP', 'PPMMMPP', '.PPPPP.'],
   },
   {
     id: 'penguin',
@@ -204,33 +204,17 @@ const BIG: Picture[] = [
   {
     id: 'ladybird',
     name: { en: 'a ladybird', hr: 'bubamara' },
-    rows: [
-      '...K...',
-      '..KKK..',
-      '.RRKRR.',
-      'RKRKRKR',
-      'RRRKRRR',
-      'RKRKRKR',
-      '.RRKRR.',
-    ],
+    rows: ['...K...', '..KKK..', '.RRKRR.', 'RKRKRKR', 'RRRKRRR', '.RRKRR.'],
   },
   {
     id: 'castle',
     name: { en: 'a castle', hr: 'dvorac' },
-    rows: ['S.S.S.S', 'SSSSSSS', 'SCSSSCS', 'SSSSSSS', 'SSSNSSS', 'SSNNNSS'],
+    rows: ['S.S.S.S', 'SSSSSSS', 'SCSSSCS', 'SSSNSSS', 'SSNNNSS'],
   },
   {
     id: 'frog',
     name: { en: 'a frog', hr: 'žaba' },
-    rows: [
-      '.GG.GG.',
-      'GKGGGKG',
-      'GGGGGGG',
-      'GRGGGRG',
-      'GGRRRGG',
-      '.GGGGG.',
-      'GG...GG',
-    ],
+    rows: ['.GG.GG.', 'GKGGGKG', 'GGGGGGG', 'GRGGGRG', '.GRRRG.', 'GG...GG'],
   },
   {
     id: 'bus',

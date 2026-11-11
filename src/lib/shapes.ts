@@ -81,6 +81,13 @@ export function fits(
   );
 }
 
+// Whether saved pieces still make sense for the puzzle: the same number of
+// pieces, and every one on the board where it fits. Not so when the levels
+// have been made again since.
+export const stillFits = (puzzle: Puzzle, pieces: Piece[]) =>
+  pieces.length === puzzle.shapes.length &&
+  pieces.every((p, i) => !p.at || fits(puzzle, pieces, i, p.turns, p.at));
+
 // Where a piece let go at (r, c), in squares and not yet whole, lands: the
 // nearest place close by where it fits, or null if there is none. Close by
 // is forgiving, so a small finger doesn't have to be exact.

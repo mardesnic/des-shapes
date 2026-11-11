@@ -17,7 +17,7 @@ import {
 } from './lib/game';
 import { STRINGS, detectLang } from './lib/i18n';
 import { levelById, pickLevel, pictureOf } from './lib/levels';
-import { puzzleOf, type Piece } from './lib/shapes';
+import { puzzleOf, stillFits, type Piece } from './lib/shapes';
 import { popMenu, pushMenu, useBackButton } from './lib/use-back-button';
 import { useCheer } from './lib/use-cheer';
 import { useStoredState } from './lib/use-stored-state';
@@ -31,11 +31,12 @@ export default function App() {
   const [store, setStore] = useStoredState<{ game?: Game }>('shapes', {});
   // A saved game whose level has since been taken out, or saved by an
   // older version, is dropped.
+  const saved = store.game;
   const level =
-    Array.isArray(store.game?.pieces) &&
-    levelById(store.game.difficulty, store.game.level);
-  const game = level ? store.game : undefined;
+    Array.isArray(saved?.pieces) && levelById(saved.difficulty, saved.level);
   const puzzle = useMemo(() => level && puzzleOf(level), [level]);
+  const game =
+    saved && puzzle && stillFits(puzzle, saved.pieces) ? saved : undefined;
   const picture = level && game && pictureOf(game.difficulty, level);
   const [settings, setSettings] = useStoredState<Settings>(
     'shapes-settings',

@@ -10,6 +10,7 @@ import {
   puzzleOf,
   rotate,
   snap,
+  stillFits,
   turnInPlace,
   type Cell,
   type Piece,
@@ -137,6 +138,15 @@ describe('placing', () => {
       i === 1 ? { turns: 0, at: [0, 0] as Cell } : p
     );
     expect(fits(puzzle, pieces, 0, 0, [0, 0])).toBe(false);
+  });
+
+  it('drops saved pieces that no longer fit the level', () => {
+    expect(stillFits(puzzle, tray)).toBe(true);
+    expect(stillFits(puzzle, tray.slice(1))).toBe(false);
+    const off = tray.map((p, i) =>
+      i === 0 ? { turns: 0, at: [0, 1] as Cell } : p
+    );
+    expect(stillFits(puzzle, off)).toBe(false);
   });
 
   it('snaps to the nearest place that fits', () => {

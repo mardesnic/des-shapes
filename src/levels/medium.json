@@ -2,241 +2,740 @@
   {
     "id": "cat-1",
     "picture": "cat",
-    "cut": ["a...b", "aa.bb", "cccbd", "eecdd", ".eed."],
-    "turns": [3, 1, 1, 3, 1]
+    "cut": [
+      "a...b",
+      "aa.bb",
+      "cccbd",
+      "eecdd",
+      ".eed."
+    ],
+    "turns": [
+      3,
+      1,
+      1,
+      3,
+      1
+    ]
   },
   {
     "id": "cat-2",
     "picture": "cat",
-    "cut": ["a...b", "ac.db", "acddb", "aceeb", ".cee."],
-    "turns": [3, 1, 3, 3, 0]
+    "cut": [
+      "a...b",
+      "ac.db",
+      "acddb",
+      "aceeb",
+      ".cee."
+    ],
+    "turns": [
+      3,
+      1,
+      3,
+      3,
+      0
+    ]
   },
   {
     "id": "cat-3",
     "picture": "cat",
-    "cut": ["a...b", "aa.bb", "acdeb", "ccdee", ".cde."],
-    "turns": [1, 2, 2, 1, 3]
+    "cut": [
+      "a...b",
+      "aa.bb",
+      "acdeb",
+      "ccdee",
+      ".cde."
+    ],
+    "turns": [
+      1,
+      2,
+      2,
+      1,
+      3
+    ]
   },
   {
     "id": "cat-4",
     "picture": "cat",
-    "cut": ["a...b", "aa.cb", "daccb", "ddceb", ".dee."],
-    "turns": [3, 3, 1, 1, 3]
+    "cut": [
+      "a...b",
+      "aa.cb",
+      "daccb",
+      "ddceb",
+      ".dee."
+    ],
+    "turns": [
+      3,
+      3,
+      1,
+      1,
+      3
+    ]
   },
   {
     "id": "cat-5",
     "picture": "cat",
-    "cut": ["a...b", "ac.db", "accdb", "acedb", ".eed."],
-    "turns": [1, 1, 1, 1, 2]
+    "cut": [
+      "a...b",
+      "ac.db",
+      "accdb",
+      "acedb",
+      ".eed."
+    ],
+    "turns": [
+      1,
+      1,
+      1,
+      1,
+      2
+    ]
   },
   {
     "id": "fish-1",
     "picture": "fish",
-    "cut": ["..a...", ".aaa.b", "ccddbb", "ccddee", ".fff.e", "..f..."],
-    "turns": [2, 1, 0, 0, 1, 1]
+    "cut": [
+      "..a...",
+      ".aaa.b",
+      "ccddbb",
+      "ccddee",
+      ".fff.e",
+      "..f..."
+    ],
+    "turns": [
+      2,
+      1,
+      0,
+      0,
+      1,
+      1
+    ]
   },
   {
     "id": "fish-2",
     "picture": "fish",
-    "cut": ["..a...", ".aab.c", "daebcc", "ddebff", ".deb.f", "..e..."],
-    "turns": [1, 1, 3, 3, 3, 2]
+    "cut": [
+      "..a...",
+      ".aab.c",
+      "daebcc",
+      "ddebff",
+      ".deb.f",
+      "..e..."
+    ],
+    "turns": [
+      1,
+      1,
+      3,
+      3,
+      3,
+      2
+    ]
   },
   {
     "id": "fish-3",
     "picture": "fish",
-    "cut": ["..a...", ".aab.c", "dabbec", "dddeec", ".ffe.c", "..f..."],
-    "turns": [1, 2, 1, 3, 1, 2]
+    "cut": [
+      "..a...",
+      ".aab.c",
+      "dabbec",
+      "dddeec",
+      ".ffe.c",
+      "..f..."
+    ],
+    "turns": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      2
+    ]
   },
   {
     "id": "fish-4",
     "picture": "fish",
-    "cut": ["..a...", ".bac.d", "bbaccd", "beeecd", ".eff.d", "..f..."],
-    "turns": [3, 3, 1, 1, 1, 3]
+    "cut": [
+      "..a...",
+      ".bac.d",
+      "bbaccd",
+      "beeecd",
+      ".eff.d",
+      "..f..."
+    ],
+    "turns": [
+      3,
+      3,
+      1,
+      1,
+      1,
+      3
+    ]
   },
   {
     "id": "fish-5",
     "picture": "fish",
-    "cut": ["..a...", ".aaa.b", "cccddb", "eeeedb", ".fff.b", "..f..."],
-    "turns": [2, 3, 1, 2, 1, 2]
+    "cut": [
+      "..a...",
+      ".aaa.b",
+      "cccddb",
+      "eeeedb",
+      ".fff.b",
+      "..f..."
+    ],
+    "turns": [
+      2,
+      3,
+      1,
+      2,
+      1,
+      2
+    ]
   },
   {
     "id": "house-1",
     "picture": "house",
-    "cut": ["..a..", ".bac.", "dbace", "dbfce", "dfffe"],
-    "turns": [1, 1, 3, 1, 1, 1]
+    "cut": [
+      "..a..",
+      ".bac.",
+      "dbace",
+      "dbfce",
+      "dfffe"
+    ],
+    "turns": [
+      1,
+      1,
+      3,
+      1,
+      1,
+      1
+    ]
   },
   {
     "id": "house-2",
     "picture": "house",
-    "cut": ["..a..", ".baa.", "bbacd", "beccd", "eeecd"],
-    "turns": [3, 1, 2, 3, 3]
+    "cut": [
+      "..a..",
+      ".baa.",
+      "bbacd",
+      "beccd",
+      "eeecd"
+    ],
+    "turns": [
+      3,
+      1,
+      2,
+      3,
+      3
+    ]
   },
   {
     "id": "house-3",
     "picture": "house",
-    "cut": ["..a..", ".aaa.", "bbbbc", "ddccc", "ddeee"],
-    "turns": [2, 1, 1, 0, 3]
+    "cut": [
+      "..a..",
+      ".aaa.",
+      "bbbbc",
+      "ddccc",
+      "ddeee"
+    ],
+    "turns": [
+      2,
+      1,
+      1,
+      0,
+      3
+    ]
   },
   {
     "id": "house-4",
     "picture": "house",
-    "cut": ["..a..", ".aab.", "ccabd", "ecbbd", "eeedd"],
-    "turns": [2, 3, 2, 2, 2]
+    "cut": [
+      "..a..",
+      ".aab.",
+      "ccabd",
+      "ecbbd",
+      "eeedd"
+    ],
+    "turns": [
+      2,
+      3,
+      2,
+      2,
+      2
+    ]
   },
   {
     "id": "house-5",
     "picture": "house",
-    "cut": ["..a..", ".baa.", "cbbad", "cbddd", "cceee"],
-    "turns": [1, 2, 1, 1, 3]
+    "cut": [
+      "..a..",
+      ".baa.",
+      "cbbad",
+      "cbddd",
+      "cceee"
+    ],
+    "turns": [
+      1,
+      2,
+      1,
+      1,
+      3
+    ]
   },
   {
     "id": "crown-1",
     "picture": "crown",
-    "cut": ["a.b.c", "aabcc", "dbbee", "dddee"],
-    "turns": [3, 3, 2, 2, 0]
+    "cut": [
+      "a.b.c",
+      "aabcc",
+      "dbbee",
+      "dddee"
+    ],
+    "turns": [
+      3,
+      3,
+      2,
+      2,
+      0
+    ]
   },
   {
     "id": "crown-2",
     "picture": "crown",
-    "cut": ["a.b.c", "adbec", "adbec", "ddeec"],
-    "turns": [1, 1, 3, 3, 1]
+    "cut": [
+      "a.b.c",
+      "adbec",
+      "adbec",
+      "ddeec"
+    ],
+    "turns": [
+      1,
+      1,
+      3,
+      3,
+      1
+    ]
   },
   {
     "id": "crown-3",
     "picture": "crown",
-    "cut": ["a.b.c", "abbcc", "addce", "addee"],
-    "turns": [3, 1, 3, 0, 2]
+    "cut": [
+      "a.b.c",
+      "abbcc",
+      "addce",
+      "addee"
+    ],
+    "turns": [
+      3,
+      1,
+      3,
+      0,
+      2
+    ]
   },
   {
     "id": "crown-4",
     "picture": "crown",
-    "cut": ["a.b.c", "abbcc", "adbee", "dddee"],
-    "turns": [3, 1, 1, 3, 0]
+    "cut": [
+      "a.b.c",
+      "abbcc",
+      "adbee",
+      "dddee"
+    ],
+    "turns": [
+      3,
+      1,
+      1,
+      3,
+      0
+    ]
   },
   {
     "id": "crown-5",
     "picture": "crown",
-    "cut": ["a.b.c", "aabcc", "dabce", "ddbee"],
-    "turns": [3, 3, 1, 2, 3]
+    "cut": [
+      "a.b.c",
+      "aabcc",
+      "dabce",
+      "ddbee"
+    ],
+    "turns": [
+      3,
+      3,
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": "butterfly-1",
     "picture": "butterfly",
-    "cut": ["aa..bb", "aaccbb", ".ccdd.", "eeddff", "ee..ff"],
-    "turns": [0, 0, 1, 3, 0, 0]
+    "cut": [
+      "aa..bb",
+      "aaccbb",
+      ".ccdd.",
+      "eeddff",
+      "ee..ff"
+    ],
+    "turns": [
+      0,
+      0,
+      1,
+      3,
+      0,
+      0
+    ]
   },
   {
     "id": "butterfly-2",
     "picture": "butterfly",
-    "cut": ["aa..bb", "aacdbb", ".ccdd.", "eecdff", "ee..ff"],
-    "turns": [0, 0, 3, 2, 0, 0]
+    "cut": [
+      "aa..bb",
+      "aacdbb",
+      ".ccdd.",
+      "eecdff",
+      "ee..ff"
+    ],
+    "turns": [
+      0,
+      0,
+      3,
+      2,
+      0,
+      0
+    ]
   },
   {
     "id": "butterfly-3",
     "picture": "butterfly",
-    "cut": ["aa..bb", "accdbb", ".cdde.", "ffdeeg", "ff..gg"],
-    "turns": [3, 0, 3, 3, 2, 0, 3]
+    "cut": [
+      "aa..bb",
+      "accdbb",
+      ".cdde.",
+      "ffdeeg",
+      "ff..gg"
+    ],
+    "turns": [
+      3,
+      0,
+      3,
+      3,
+      2,
+      0,
+      3
+    ]
   },
   {
     "id": "butterfly-4",
     "picture": "butterfly",
-    "cut": ["aa..bb", "aacccb", ".dddd.", "eefffg", "ee..gg"],
-    "turns": [0, 2, 1, 1, 0, 1, 1]
+    "cut": [
+      "aa..bb",
+      "aacccb",
+      ".dddd.",
+      "eefffg",
+      "ee..gg"
+    ],
+    "turns": [
+      0,
+      2,
+      1,
+      1,
+      0,
+      1,
+      1
+    ]
   },
   {
     "id": "butterfly-5",
     "picture": "butterfly",
-    "cut": ["aa..bb", "aacccb", ".ddee.", "fddegg", "ff..gg"],
-    "turns": [0, 3, 3, 0, 3, 3, 0]
+    "cut": [
+      "aa..bb",
+      "aacccb",
+      ".ddee.",
+      "fddegg",
+      "ff..gg"
+    ],
+    "turns": [
+      0,
+      3,
+      3,
+      0,
+      3,
+      3,
+      0
+    ]
   },
   {
     "id": "sailboat-1",
     "picture": "sailboat",
-    "cut": [".a...", ".aa..", ".bbc.", ".bbcc", "ddeec", ".dee."],
-    "turns": [1, 0, 1, 3, 0]
+    "cut": [
+      ".a...",
+      ".aa..",
+      ".bbc.",
+      ".bbcc",
+      "ddeec",
+      ".dee."
+    ],
+    "turns": [
+      1,
+      0,
+      1,
+      3,
+      0
+    ]
   },
   {
     "id": "sailboat-2",
     "picture": "sailboat",
-    "cut": [".a...", ".aa..", ".bbb.", ".bcdd", "ccced", ".eee."],
-    "turns": [1, 2, 3, 3, 1]
+    "cut": [
+      ".a...",
+      ".aa..",
+      ".bbb.",
+      ".bcdd",
+      "ccced",
+      ".eee."
+    ],
+    "turns": [
+      1,
+      2,
+      3,
+      3,
+      1
+    ]
   },
   {
     "id": "sailboat-3",
     "picture": "sailboat",
-    "cut": [".a...", ".aa..", ".bbb.", ".cdbe", "ccdee", ".dde."],
-    "turns": [2, 3, 1, 2, 3]
+    "cut": [
+      ".a...",
+      ".aa..",
+      ".bbb.",
+      ".cdbe",
+      "ccdee",
+      ".dde."
+    ],
+    "turns": [
+      2,
+      3,
+      1,
+      2,
+      3
+    ]
   },
   {
     "id": "sailboat-4",
     "picture": "sailboat",
-    "cut": [".a...", ".ab..", ".abb.", ".acdd", "ccced", ".eee."],
-    "turns": [3, 3, 3, 3, 3]
+    "cut": [
+      ".a...",
+      ".ab..",
+      ".abb.",
+      ".acdd",
+      "ccced",
+      ".eee."
+    ],
+    "turns": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
   },
   {
     "id": "sailboat-5",
     "picture": "sailboat",
-    "cut": [".a...", ".ab..", ".abb.", ".accc", "ddeec", ".dde."],
-    "turns": [3, 1, 1, 1, 3]
+    "cut": [
+      ".a...",
+      ".ab..",
+      ".abb.",
+      ".accc",
+      "ddeec",
+      ".dde."
+    ],
+    "turns": [
+      3,
+      1,
+      1,
+      1,
+      3
+    ]
   },
   {
     "id": "strawberry-1",
     "picture": "strawberry",
-    "cut": [".aaa.", "bbccc", "bbddd", ".eee.", "..e.."],
-    "turns": [1, 0, 3, 1, 2]
+    "cut": [
+      ".aaa.",
+      "bbccc",
+      "bbddd",
+      ".eee.",
+      "..e.."
+    ],
+    "turns": [
+      1,
+      0,
+      3,
+      1,
+      2
+    ]
   },
   {
     "id": "strawberry-2",
     "picture": "strawberry",
-    "cut": [".abb.", "aacbb", "ddcee", ".dce.", "..c.."],
-    "turns": [1, 1, 3, 2, 2]
+    "cut": [
+      ".abb.",
+      "aacbb",
+      "ddcee",
+      ".dce.",
+      "..c.."
+    ],
+    "turns": [
+      1,
+      1,
+      3,
+      2,
+      2
+    ]
   },
   {
     "id": "strawberry-3",
     "picture": "strawberry",
-    "cut": [".aab.", "cabbb", "ccddd", ".eed.", "..e.."],
-    "turns": [2, 3, 2, 2, 2]
+    "cut": [
+      ".aab.",
+      "cabbb",
+      "ccddd",
+      ".eed.",
+      "..e.."
+    ],
+    "turns": [
+      2,
+      3,
+      2,
+      2,
+      2
+    ]
   },
   {
     "id": "strawberry-4",
     "picture": "strawberry",
-    "cut": [".abb.", "aabbc", "dddcc", ".eec.", "..e.."],
-    "turns": [1, 0, 3, 1, 1]
+    "cut": [
+      ".abb.",
+      "aabbc",
+      "dddcc",
+      ".eec.",
+      "..e.."
+    ],
+    "turns": [
+      1,
+      0,
+      3,
+      1,
+      1
+    ]
   },
   {
     "id": "strawberry-5",
     "picture": "strawberry",
-    "cut": [".abc.", "aabcc", "ddbbc", ".dee.", "..e.."],
-    "turns": [3, 3, 3, 2, 2]
+    "cut": [
+      ".abc.",
+      "aabcc",
+      "ddbbc",
+      ".dee.",
+      "..e.."
+    ],
+    "turns": [
+      3,
+      3,
+      3,
+      2,
+      2
+    ]
   },
   {
     "id": "mushroom-1",
     "picture": "mushroom",
-    "cut": [".aaa.", "bbcdd", "bbcdd", "..c..", ".eee."],
-    "turns": [1, 0, 1, 0, 1]
+    "cut": [
+      ".aaa.",
+      "bbcdd",
+      "bbcdd",
+      "..c..",
+      ".eee."
+    ],
+    "turns": [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
   },
   {
     "id": "mushroom-2",
     "picture": "mushroom",
-    "cut": [".aaa.", "bbbac", "dddcc", "..d..", ".eee."],
-    "turns": [3, 3, 3, 1, 3]
+    "cut": [
+      ".aaa.",
+      "bbbac",
+      "dddcc",
+      "..d..",
+      ".eee."
+    ],
+    "turns": [
+      3,
+      3,
+      3,
+      1,
+      3
+    ]
   },
   {
     "id": "mushroom-3",
     "picture": "mushroom",
-    "cut": [".aaa.", "bbbbc", "dddcc", "..d..", ".eee."],
-    "turns": [3, 1, 1, 1, 3]
+    "cut": [
+      ".aaa.",
+      "bbbbc",
+      "dddcc",
+      "..d..",
+      ".eee."
+    ],
+    "turns": [
+      3,
+      1,
+      1,
+      1,
+      3
+    ]
   },
   {
     "id": "mushroom-4",
     "picture": "mushroom",
-    "cut": [".aaa.", "bbbcc", "bddcc", "..d..", ".eee."],
-    "turns": [1, 1, 0, 2, 1]
+    "cut": [
+      ".aaa.",
+      "bbbcc",
+      "bddcc",
+      "..d..",
+      ".eee."
+    ],
+    "turns": [
+      1,
+      1,
+      0,
+      2,
+      1
+    ]
   },
   {
     "id": "mushroom-5",
     "picture": "mushroom",
-    "cut": [".aaa.", "bbacc", "bdddc", "..e..", ".eee."],
-    "turns": [2, 1, 3, 1, 3]
+    "cut": [
+      ".aaa.",
+      "bbacc",
+      "bdddc",
+      "..e..",
+      ".eee."
+    ],
+    "turns": [
+      2,
+      1,
+      3,
+      1,
+      3
+    ]
   }
 ]
