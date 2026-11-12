@@ -1,9 +1,4 @@
-import {
-  DIFFICULTIES,
-  type Difficulty,
-  type Settings,
-  type Stats,
-} from '../lib/game';
+import { DIFFICULTIES, type Difficulty, type Stats } from '../lib/game';
 import { LEVELS } from '../lib/levels';
 import { LANG_NAMES, LANGS, type Language, type Strings } from '../lib/i18n';
 
@@ -60,17 +55,17 @@ function Segmented<T>({
 }
 
 export function SettingsView({
-  settings,
+  sound,
   language,
   setLanguage,
-  setSettings,
+  setSound,
   stats,
   t,
 }: {
-  settings: Settings;
+  sound: boolean;
   language: Language;
   setLanguage: (l: Language) => void;
-  setSettings: (s: Settings) => void;
+  setSound: (on: boolean) => void;
   stats: Stats;
   t: Strings;
 }) {
@@ -95,9 +90,9 @@ export function SettingsView({
           <span>{t.sound}</span>
           <Segmented
             options={[true, false]}
-            value={settings.sound}
+            value={sound}
             label={(on) => (on ? t.on : t.off)}
-            onChange={(sound) => setSettings({ ...settings, sound })}
+            onChange={setSound}
           />
         </div>
       </section>

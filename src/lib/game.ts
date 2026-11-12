@@ -5,14 +5,6 @@ import type { Piece } from './shapes';
 export const DIFFICULTIES = ['tiny', 'small', 'medium', 'big'] as const;
 export type Difficulty = (typeof DIFFICULTIES)[number];
 
-export type Settings = {
-  sound: boolean;
-};
-
-export const initialSettings: Settings = {
-  sound: true,
-};
-
 export type Game = {
   difficulty: Difficulty;
   level: string;
