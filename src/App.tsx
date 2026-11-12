@@ -20,7 +20,7 @@ import { levelById, pickLevel, pictureOf } from './lib/levels';
 import { puzzleOf, stillFits, type Piece } from './lib/shapes';
 import { popMenu, pushMenu, useBackButton } from './lib/use-back-button';
 import { useCheer } from './lib/use-cheer';
-import { useSettings } from './lib/use-settings';
+import { useLanguage } from './lib/use-language';
 import { useStoredState } from './lib/use-stored-state';
 import { useWakeLock } from './lib/use-wake-lock';
 
@@ -39,7 +39,7 @@ export default function App() {
   const game =
     saved && puzzle && stillFits(puzzle, saved.pieces) ? saved : undefined;
   const picture = level && game && pictureOf(game.difficulty, level);
-  const [settings, setSettings] = useSettings<Settings>(
+  const [settings, setSettings] = useStoredState<Settings>(
     'shapes-settings',
     initialSettings
   );
@@ -57,7 +57,8 @@ export default function App() {
   useWakeLock();
   const cheer = useCheer(settings.sound);
 
-  const lang = settings.language === 'auto' ? detectLang() : settings.language;
+  const [language, setLanguage] = useLanguage();
+  const lang = language === 'auto' ? detectLang() : language;
   const t = STRINGS[lang];
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -140,6 +141,8 @@ export default function App() {
       {view === 'new' && <NewGame onStart={start} t={t} />}
       {view === 'settings' && (
         <SettingsView
+          language={language}
+          setLanguage={setLanguage}
           settings={settings}
           setSettings={setSettings}
           stats={stats}
