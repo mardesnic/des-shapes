@@ -55,8 +55,8 @@ const hr: Strings = {
   done: 'Gotovo',
   cancel: 'Odustani',
   levels: {
-    tiny: 'Vrlo lako',
-    small: 'Lako',
+    tiny: 'Vrlo lagano',
+    small: 'Lagano',
     medium: 'Srednje',
     big: 'Teško',
   },
