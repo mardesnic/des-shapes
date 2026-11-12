@@ -20,6 +20,7 @@ import { levelById, pickLevel, pictureOf } from './lib/levels';
 import { puzzleOf, stillFits, type Piece } from './lib/shapes';
 import { popMenu, pushMenu, useBackButton } from './lib/use-back-button';
 import { useCheer } from './lib/use-cheer';
+import { useSettings } from './lib/use-settings';
 import { useStoredState } from './lib/use-stored-state';
 import { useWakeLock } from './lib/use-wake-lock';
 
@@ -38,7 +39,7 @@ export default function App() {
   const game =
     saved && puzzle && stillFits(puzzle, saved.pieces) ? saved : undefined;
   const picture = level && game && pictureOf(game.difficulty, level);
-  const [settings, setSettings] = useStoredState<Settings>(
+  const [settings, setSettings] = useSettings<Settings>(
     'shapes-settings',
     initialSettings
   );
