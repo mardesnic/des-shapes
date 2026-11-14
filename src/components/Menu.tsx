@@ -1,5 +1,4 @@
 import { DIFFICULTIES, type Difficulty, type Stats } from '../lib/game';
-import { LEVELS } from '../lib/levels';
 import { LANG_NAMES, LANGS, type Language, type Strings } from '../lib/i18n';
 
 export function NewGame({
@@ -110,7 +109,7 @@ export function SettingsView({
             {DIFFICULTIES.map((d) => (
               <tr key={d}>
                 <th>{t.levels[d]}</th>
-                <td>{t.solvedOf(stats[d].length, LEVELS[d].length)}</td>
+                <td>{stats[d].length}</td>
               </tr>
             ))}
           </tbody>
